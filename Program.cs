@@ -13,7 +13,7 @@ namespace ParsingViaCKY
 
 
             // L1 = new ContextFreeGrammar("test1.txt");
-            L1 = new ContextFreeGrammar("game2.txt");
+            L1 = new ContextFreeGrammar("grammar1.txt");
             // L1 = new ContextFreeGrammar("mixed.txt");
             //  L1 = new ContextFreeGrammar("L1.txt");
             //L1 = new ContextFreeGrammar("game.txt");
@@ -41,7 +41,7 @@ namespace ParsingViaCKY
 
 
             //L2 = new ContextFreeGrammar(L1);
-            L2 = new ContextFreeGrammar("game2.txt");
+            L2 = new ContextFreeGrammar("grammar1.txt");
             L2.ConvertToCNF();
 
 
@@ -59,10 +59,12 @@ namespace ParsingViaCKY
             //  string sentence = "book the flight through Houston";
             //string sentence = "wear red robe";
             //string sentence = "hi";
-            string sentence = "wear the leather armor";
+            //       string sentence = "wear the leather armor";
             //string sentence = "go to the store";
             // string sentence = "wear the armor";
             //  string sentence = "wear the red silk robe";
+
+            string sentence = "book that flight";
 
 
 
@@ -120,6 +122,12 @@ namespace ParsingViaCKY
                 ParseTreeNode S = t.GetRoot();
                 ParseTreeNode DO = S.GetConstituentTree("DO");
                 ParseTreeNode V = S.GetConstituentTree("V");
+
+                if (DO == null)
+                    continue;
+                if (V == null)
+                    continue;
+
 
                 string directObject = DO.GetString();
                 string verb = V.GetString();
