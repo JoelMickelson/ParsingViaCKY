@@ -94,8 +94,6 @@ namespace ParsingViaCKY
 
 
 
-
-
             int longRules = 0;
 
             List<ParseTreeNode> children = new List<ParseTreeNode>(this.Children);
@@ -362,9 +360,6 @@ namespace ParsingViaCKY
 
 
         }
-
-
-
 
 
 

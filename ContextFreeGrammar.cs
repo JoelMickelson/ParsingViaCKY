@@ -125,24 +125,6 @@ namespace ParsingViaCKY
             {
                 string s = GetRuleString(rule);
 
-                //string lhs = getSymbolLabelFromCode(rule.LHS);
-
-                //List<string> rhs = new List<string>();
-
-                //foreach (int i in rule.RHS)
-                //{
-                //    rhs.Add(getSymbolLabelFromCode(i));
-                //}
-
-                //string s = lhs + " -> ";
-                //foreach (string r in rhs)
-                //{
-                //    s += r;
-
-                //    if (r != rhs.Last())
-                //        s += ' ';
-                //}
-
                 Console.WriteLine(s);
             }
         }
@@ -348,13 +330,6 @@ namespace ParsingViaCKY
 
 
             obsoleteRules.Clear();
-
-
-
-
-
-
-
 
 
 

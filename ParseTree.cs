@@ -24,7 +24,6 @@ namespace ParsingViaCKY
 
 
 
-
             // apparently we're constructing multiple trees, and the table can already have them!
 
             List<ParseTree> parseTrees = new List<ParseTree>();
@@ -100,19 +99,6 @@ namespace ParsingViaCKY
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
             int l = 0;
             do
             {
@@ -122,11 +108,6 @@ namespace ParsingViaCKY
             } while (l > 0);
 
 
-            // to expand unit productions, we reconcile the tree with the original grammar
-            // whenever a node->child relationship is not in the grammar, 
-            // NO
-
-            // here's how we're doing it
             // when a grammar is converted to CNF, any rule that is a unit production has a 'via' attribute showing which constituent is being replaced
             // (or better yet, show which grammar rule is being replaced)
 
@@ -140,14 +121,12 @@ namespace ParsingViaCKY
             // DO->NP is a legitimate rule, and NP->armor will be checked on the next recursion
 
 
-
             int u = 0;
             do
             {
                 u = this.treeHead.ExtendUnitProductions(CNFGrammar);
                 Console.WriteLine($"{u} unit productions found.");
             } while (u > 0);
-
 
 
             // now let's convert dummy rules for mixed terminals/non-terminals

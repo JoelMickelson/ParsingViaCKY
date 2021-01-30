@@ -12,16 +12,10 @@ namespace ParsingViaCKY
             ContextFreeGrammar L2;
 
 
-            // L1 = new ContextFreeGrammar("test1.txt");
             L1 = new ContextFreeGrammar("grammar1.txt");
-            // L1 = new ContextFreeGrammar("mixed.txt");
-            //  L1 = new ContextFreeGrammar("L1.txt");
-            //L1 = new ContextFreeGrammar("game.txt");
-            //foreach ()
-
+  
             Console.WriteLine("Grammar loaded.");
-            //   Console.ReadKey();
-
+            
             Console.WriteLine("");
 
 
@@ -141,20 +135,6 @@ namespace ParsingViaCKY
             }
 
 
-
-
-
-
-            // 
-
-
-
-
-
-            //for (char c = (char)0; c < (char)255; c++)
-            //{
-            //    Console.Write("" + c);
-            //}
 
             Console.ReadKey(true);
         }
